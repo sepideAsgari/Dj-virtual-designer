@@ -1,0 +1,98 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تغییر ناوبری">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">خانه</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'edit' %}" class="nav-link">حساب کاربری</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        سرویس‌ها
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a href="{% url 'services' %}" class="dropdown-item"> شروع طراحی</a>
+                        <a href="{% url 'projects' %}" class="dropdown-item">نمونه کارها</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contactus' %}" class="nav-link">ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'aboutus' %}" class="nav-link">درباره ما</a>
+                </li>
+                <li class="nav-item">
+                    {% if user.is_authenticated %}
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link">
+                                <i class="bi bi-box-arrow-right"></i>
+                                خروج از حساب کاربری
+                            </button>
+                        </form>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="nav-link ">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            ورود به حساب کاربری
+                        </a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="#">نام سایت</a>
+    </nav>
+    <div class="contact-head container">
+        <div class="head-content">
+            <P>
+                ممنون از پیام شما!
+                <br>
+                کارشناسان ما در اسرع وقت با شما تماس میگیرند.
+            </P>
+        </div>
+    </div>
+    <section class="row">
+        <div class="container contact-container col-md-10">
+            <form method="post" class="contact-form">
+                {% csrf_token %}
+                <div class="row justify-content-center align-items-center mt-4">
+                    <div class="col-md-6 mb-4 form-group">
+                        {{ form.first_name }}
+                    </div>
+                    <div class="col-md-6 mb-4 form-group">
+                        {{ form.last_name }}
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4 form-group">
+                    {{ form.email }}
+                </div>
+                <div class="col-md-8 mb-4 form-group">
+                    {{ form.message }}
+                </div>
+                <button type="submit" class="col-md-8 btn contact-btn" onclick="subBtn()">ارسال</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer mt-5 py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-white-50">Copyright &copy;</div>
+        </div>
+    </footer>
+    <script>
+        function subBtn() {
+            alert("پیام شما با موفقیت ارسال شد.");
+        }
+    </script>
+{% endblock %}
