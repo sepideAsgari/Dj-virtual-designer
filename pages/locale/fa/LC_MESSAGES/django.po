@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-30 22:33+0330\n"
-"PO-Revision-Date: 2024-07-30 22:50+0330\n"
+"POT-Creation-Date: 2024-08-06 22:29+0330\n"
+"PO-Revision-Date: 2024-08-06 22:32+0330\n"
 "Last-Translator: fatemeh valipourrrr <valipourf52@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,61 +38,62 @@ msgstr "ایمیل"
 msgid "text"
 msgstr "متن پیام"
 
+#: .\templates\pages\aboutus.html:7 .\templates\pages\aboutus.html:38
+#: .\templates\pages\contactus.html:37 .\templates\pages\home.html:55
+#: .\templates\pages\projects.html:38 .\templates\pages\services.html:190
+msgid "About Us"
+msgstr "درباره ما"
+
 #: .\templates\pages\aboutus.html:19 .\templates\pages\contactus.html:18
-#: .\templates\pages\projects.html:19 .\templates\pages\services.html:167
+#: .\templates\pages\home.html:7 .\templates\pages\projects.html:19
+#: .\templates\pages\services.html:171
 msgid "Home"
 msgstr "خانه"
 
 #: .\templates\pages\aboutus.html:22 .\templates\pages\contactus.html:21
 #: .\templates\pages\home.html:22 .\templates\pages\projects.html:22
-#: .\templates\pages\services.html:170
+#: .\templates\pages\services.html:174
 msgid "Account"
 msgstr "حساب کاربری"
 
 #: .\templates\pages\aboutus.html:27 .\templates\pages\contactus.html:26
 #: .\templates\pages\home.html:29 .\templates\pages\projects.html:27
-#: .\templates\pages\services.html:175
+#: .\templates\pages\services.html:7 .\templates\pages\services.html:179
 msgid "Services"
 msgstr "سرویس ها"
 
 #: .\templates\pages\aboutus.html:30 .\templates\pages\contactus.html:29
 #: .\templates\pages\home.html:35 .\templates\pages\projects.html:30
-#: .\templates\pages\services.html:178
+#: .\templates\pages\services.html:182
 msgid "start design"
 msgstr "شروع طراحی"
 
 #: .\templates\pages\aboutus.html:31 .\templates\pages\contactus.html:30
 #: .\templates\pages\home.html:41 .\templates\pages\projects.html:31
-#: .\templates\pages\services.html:179
+#: .\templates\pages\services.html:183
 msgid "portfolio"
 msgstr "نمونه کارها"
 
-#: .\templates\pages\aboutus.html:35 .\templates\pages\contactus.html:34
-#: .\templates\pages\home.html:49 .\templates\pages\projects.html:35
-#: .\templates\pages\services.html:183
+#: .\templates\pages\aboutus.html:35 .\templates\pages\contactus.html:6
+#: .\templates\pages\contactus.html:34 .\templates\pages\home.html:49
+#: .\templates\pages\projects.html:35 .\templates\pages\services.html:187
 msgid "Contact Us"
 msgstr "ارتباط با ما"
 
-#: .\templates\pages\aboutus.html:38 .\templates\pages\contactus.html:37
-#: .\templates\pages\home.html:55 .\templates\pages\projects.html:38
-#: .\templates\pages\services.html:186
-msgid "About Us"
-msgstr "درباره ما"
-
 #: .\templates\pages\aboutus.html:46 .\templates\pages\contactus.html:45
 #: .\templates\pages\home.html:64 .\templates\pages\projects.html:46
-#: .\templates\pages\services.html:194
+#: .\templates\pages\services.html:198
 msgid "Logout"
 msgstr "خروج"
 
 #: .\templates\pages\aboutus.html:52 .\templates\pages\contactus.html:51
 #: .\templates\pages\home.html:70 .\templates\pages\projects.html:52
-#: .\templates\pages\services.html:200
+#: .\templates\pages\services.html:204
 msgid "Login"
 msgstr "ورود"
 
 #: .\templates\pages\aboutus.html:58 .\templates\pages\contactus.html:57
-#: .\templates\pages\projects.html:58 .\templates\pages\services.html:206
+#: .\templates\pages\projects.html:58 .\templates\pages\services.html:210
 msgid "site name"
 msgstr "نام سایت"
 
@@ -178,6 +179,11 @@ msgstr "پیام شما با موفقیت ارسال شد."
 msgid "The latest portfolio"
 msgstr "آخرین نمونه کارها"
 
+#: .\templates\pages\projects.html:7
+#| msgid "projects/"
+msgid "Projects"
+msgstr "نمونه-کار-ها"
+
 #: .\templates\pages\projects.html:62
 msgid "child Room"
 msgstr "اتاق کودک"
@@ -204,51 +210,48 @@ msgstr "عکس‌های بارگذاری شده"
 msgid "Produced photos"
 msgstr "عکس‌های تولید شده"
 
-#: .\templates\pages\services.html:211
+#: .\templates\pages\services.html:215
 msgid "Start Design"
 msgstr "شروع طراحی"
 
-#: .\templates\pages\services.html:215
+#: .\templates\pages\services.html:219
 msgid "The selected files must be in JPG, JPEG, PNG format"
 msgstr "فایلهای انتخابی باید فرمتJPG, JPEG, PNG داشته باشند"
 
-#: .\templates\pages\services.html:217
+#: .\templates\pages\services.html:221
 msgid "and be at most 50 MB."
 msgstr "و حداکثر 50 مگابایت باشند."
 
-#: .\templates\pages\services.html:229
+#: .\templates\pages\services.html:233
 msgid "Upload"
 msgstr "آپلود"
 
-#: .\templates\pages\services.html:235
+#: .\templates\pages\services.html:239
 msgid "Images uploaded successfully!"
 msgstr "تصاویر با موفقیت آپلود شدند!"
+
+#: .\templates\pages\welcome.html:6 .\templates\pages\welcome.html:21
+#: .\templates\pages\welcome.html:23
+msgid "Welcome"
+msgstr "بفرمایید"
 
 #: .\templates\pages\welcome.html:16
 msgid "Choose Virtual Design"
 msgstr "طراحی مجازی را انتخاب کنید"
 
-#: .\templates\pages\welcome.html:21 .\templates\pages\welcome.html:23
-msgid "Welcome"
-msgstr "بفرمایید"
-
 #: .\urls.py:8
-#| msgid "Home"
 msgid "home/"
 msgstr "خانه/"
 
 #: .\urls.py:9
-#| msgid "About Us"
 msgid "aboutus/"
 msgstr "درباره-ما/"
 
 #: .\urls.py:10
-#| msgid "Contact Us"
 msgid "contactus/"
 msgstr "ارتباط-با-ما/"
 
 #: .\urls.py:11
-#| msgid "Services"
 msgid "services/"
 msgstr "شروع-طراحی/"
 

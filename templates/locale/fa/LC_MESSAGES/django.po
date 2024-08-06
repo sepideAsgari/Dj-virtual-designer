@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-30 12:54+0330\n"
-"PO-Revision-Date: 2024-07-30 12:55+0330\n"
+"POT-Creation-Date: 2024-08-06 22:35+0330\n"
+"PO-Revision-Date: 2024-08-06 22:36+0330\n"
 "Last-Translator: fatemeh valipourrrr <valipourf52@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,59 +18,63 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\registration\edit_profile.html:16
+#: .\registration\edit_profile.html:5
+msgid "Edit Profile"
+msgstr "ویرایش حساب کاربری"
+
+#: .\registration\edit_profile.html:17
 msgid "Home"
 msgstr "خانه"
 
-#: .\registration\edit_profile.html:19
+#: .\registration\edit_profile.html:20
 msgid "Account"
 msgstr "حساب کاربری"
 
-#: .\registration\edit_profile.html:24
+#: .\registration\edit_profile.html:25
 msgid "Services"
 msgstr "سرویس ها"
 
-#: .\registration\edit_profile.html:27
+#: .\registration\edit_profile.html:28
 msgid "start design"
 msgstr "شروع طراحی"
 
-#: .\registration\edit_profile.html:28
+#: .\registration\edit_profile.html:29
 msgid "portfolio"
 msgstr "نمونه کارها"
 
-#: .\registration\edit_profile.html:32
+#: .\registration\edit_profile.html:33
 msgid "Contact Us"
 msgstr "ارتباط با ما"
 
-#: .\registration\edit_profile.html:35
+#: .\registration\edit_profile.html:36
 msgid "About Us"
 msgstr "درباره ما"
 
-#: .\registration\edit_profile.html:43
+#: .\registration\edit_profile.html:44
 msgid "Logout"
 msgstr "خروج"
 
-#: .\registration\edit_profile.html:49
+#: .\registration\edit_profile.html:50 .\registration\login.html:6
 msgid "Login"
 msgstr "ورود"
 
-#: .\registration\edit_profile.html:55
+#: .\registration\edit_profile.html:56
 msgid "site name"
 msgstr "نام سایت"
 
-#: .\registration\edit_profile.html:61
+#: .\registration\edit_profile.html:62
 msgid "User information"
 msgstr "اطلاعات کاربری"
 
-#: .\registration\edit_profile.html:76
+#: .\registration\edit_profile.html:77
 msgid "Save changes"
 msgstr "ذخیره تغییرات"
 
-#: .\registration\edit_profile.html:82 .\registration\login.html:20
+#: .\registration\edit_profile.html:83 .\registration\login.html:20
 msgid "Password"
 msgstr "رمز عبور"
 
-#: .\registration\edit_profile.html:98
+#: .\registration\edit_profile.html:99
 msgid "Change Password"
 msgstr "تغییر رمز عبور"
 
@@ -102,15 +106,17 @@ msgstr "عضو نیستید؟"
 msgid "Signup"
 msgstr "ثبت نام"
 
+#: .\registration\password_reset_confirm.html:6
+#: .\registration\password_reset_form.html:8
+#| msgid "Password"
+msgid "Password Reset"
+msgstr "بازیابی رمز عبور"
+
 #: .\registration\password_reset_email.html:3
 msgid "Hi"
 msgstr "سلام"
 
 #: .\registration\password_reset_email.html:5
-#| msgid ""
-#| "Hi {{ user.username }}, There was a request to change your password! If you "
-#| "did not make this request then please ignore this email. Otherwise, please "
-#| "click this link to change your password:"
 msgid ""
 "There was a request to change your password! If you did not make this "
 "request then please ignore this email. Otherwise, please click this link to "
@@ -133,6 +139,11 @@ msgstr "ارسال"
 #: .\registration\password_reset_form.html:42
 msgid "A recovery email has been sent to you."
 msgstr "ایمیل بازیابی برای شما ارسال شد."
+
+#: .\registration\signup.html:6
+#| msgid "Sign up"
+msgid "Sign Up"
+msgstr "ثبت نام"
 
 #: .\registration\signup.html:13 .\registration\signup.html:54
 msgid "Sign up"
