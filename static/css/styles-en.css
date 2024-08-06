@@ -5,6 +5,7 @@
 
 body {
   background-color: #e3e5dd;
+  direction: ltr;
 }
 
 /* welcome */
@@ -71,7 +72,7 @@ hr.divider {
   width: 100%;
   z-index: 1000;
   padding: 12px 5%;
-  direction: rtl;
+  direction: ltr;
 }
 
 .navbar-nav .nav-item {
