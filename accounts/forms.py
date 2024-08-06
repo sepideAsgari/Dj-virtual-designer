@@ -1,9 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth import get_user_model
 from django import forms
-from .models import UserProfile
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.forms import PasswordChangeForm as AuthPasswordChangeForm
+from django.utils.translation import gettext as _
 
 
 class EmailAuthenticationForm(AuthenticationForm):
@@ -17,15 +16,15 @@ class EmailAuthenticationForm(AuthenticationForm):
 
 class CustomUserCreationForm(UserCreationForm):
     first_name = forms.CharField(label='نام', max_length=30, widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'نام', 'style': 'direction: rtl;'}))
+        attrs={'class': 'form-control', 'placeholder': _('First name'), 'style': 'direction: rtl;'}))
     last_name = forms.CharField(label='نام خانوادگی', max_length=30, widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'نام خانوادگی', 'style': 'direction: rtl;'}))
-    email = forms.EmailField(label='ایمیل', widget=forms.EmailInput(
-        attrs={'class': 'form-control', 'placeholder': 'ایمیل', 'style': 'direction: rtl;'}))
+        attrs={'class': 'form-control', 'placeholder': _('Last name'), 'style': 'direction: rtl;'}))
+    email = forms.EmailField(label=_('email'), widget=forms.EmailInput(
+        attrs={'class': 'form-control', 'placeholder': _('Email'), 'style': 'direction: rtl;'}))
     password1 = forms.CharField(label='رمز عبور', widget=forms.PasswordInput(
-        attrs={'class': 'form-control', 'placeholder': 'رمز عبور', 'style': 'direction: rtl;'}))
+        attrs={'class': 'form-control', 'placeholder': _('Password'), 'style': 'direction: rtl;'}))
     password2 = forms.CharField(label='تکرار رمز عبور', widget=forms.PasswordInput(
-        attrs={'class': 'form-control', 'placeholder': 'تکرار رمز عبور', 'style': 'direction: rtl;'}))
+        attrs={'class': 'form-control', 'placeholder': _('Repeat the password'), 'style': 'direction: rtl;'}))
 
     class Meta:
         model = get_user_model()
@@ -37,7 +36,7 @@ class CustomUserCreationForm(UserCreationForm):
         password2 = cleaned_data.get("password2")
 
         if password1 and password2 and password1 != password2:
-            raise forms.ValidationError("رمز عبور و تکرار آن باید یکسان باشند")
+            raise forms.ValidationError(_("The password and its repetition must be the same"))
 
         return cleaned_data
 
@@ -69,9 +68,9 @@ class UserEditForm(forms.ModelForm):
 
 
 class CustomPasswordChangeForm(PasswordChangeForm):
-    old_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'رمز عبور فعلی'}))
-    new_password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'رمز عبور جدید'}))
-    new_password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'تکرار رمز عبور جدید'}))
+    old_password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': _('Current password')}))
+    new_password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': _('New password')}))
+    new_password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': _('Repeat the new password')}))
 
     def clean(self):
         cleaned_data = super().clean()
@@ -79,6 +78,6 @@ class CustomPasswordChangeForm(PasswordChangeForm):
         new_password2 = cleaned_data.get("new_password2")
 
         if new_password1 and new_password2 and new_password1 != new_password2:
-            raise forms.ValidationError("رمزهای عبور جدید با هم مطابقت ندارند.")
+            raise forms.ValidationError(_("The new passwords do not match."))
 
         return cleaned_data

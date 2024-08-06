@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% block page_title %}
     Home
@@ -18,26 +19,26 @@
             <li class="nav-item">
                 <a href="{% url 'edit' %}" class="nav-link">
                     <i class="bi bi-person"></i>
-                    حساب کاربری
+                    {% trans 'Account' %}
                 </a>
             </li>
             <li class="nav-item">
                 <a href="#services-dropdown" class="nav-link dropdown-toggle" data-toggle="collapse"
                    aria-expanded="false">
                     <i class="bi bi-house-gear"></i>
-                    سرویس‌ها
+                    {% trans 'Services' %}
                 </a>
                 <ul class="collapse list-unstyled drop-nav" id="services-dropdown">
                     <li class="nav-item">
                         <a href="{% url 'services' %}" class="nav-link">
                             <i class="bi bi-house-heart"></i>
-                            شروع طراحی
+                            {% trans 'start design' %}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url 'projects' %}" class="nav-link">
                             <i class="bi bi-images"></i>
-                            مشاهده نمونه کارها
+                            {% trans 'portfolio' %}
                         </a>
                     </li>
                 </ul>
@@ -45,13 +46,13 @@
             <li class="nav-item">
                 <a href="{% url 'contactus' %}" class="nav-link">
                     <i class="bi bi-chat"></i>
-                    ارتباط با ما
+                    {% trans 'Contact Us' %}
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{% url 'aboutus' %}" class="nav-link">
                     <i class="bi bi-info-circle"></i>
-                    درباره ما
+                    {% trans 'About Us' %}
                 </a>
             </li>
             <li class="nav-item">
@@ -60,13 +61,13 @@
                         {% csrf_token %}
                         <a href="{% url 'login' %}" class="nav-link ">
                             <i class="bi bi-box-arrow-in-right"></i>
-                            خروج از حساب کاربری
+                            {% trans 'Logout' %}
                         </a>
                     </form>
                 {% else %}
                     <a href="{% url 'login' %}" class="nav-link ">
                         <i class="bi bi-box-arrow-in-right"></i>
-                        ورود به حساب کاربری
+                        {% trans 'Login' %}
                     </a>
                 {% endif %}
             </li>
@@ -81,7 +82,7 @@
     <!-- gallery section -->
     <div class="row gallery-section align-items-center justify-content-center d-flex py-5">
         <div class="row gallery-text fw-bold">
-            <a href="{% url 'projects' %}" class="topic-link">جدیدترین نمونه کارها</a>
+            <a href="{% url 'projects' %}" class="topic-link">{% trans 'The latest portfolio' %}</a>
             <hr class="topic-divider">
         </div>
         <div class="row col-md-10">

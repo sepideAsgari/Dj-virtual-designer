@@ -1,13 +1,14 @@
 {% extends '_base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% block page_title %}
     Projects
 {% endblock %}
 
 {% block content %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="تغییر ناوبری">
             <span class="navbar-toggler-icon"></span>
@@ -15,26 +16,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">خانه</a>
+                    <a class="nav-link" href="{% url 'home' %}">{% translate 'Home' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'edit' %}" class="nav-link">حساب کاربری</a>
+                    <a href="{% url 'edit' %}" class="nav-link">{% trans 'Account' %}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        سرویس‌ها
+                        {% trans 'Services' %}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a href="{% url 'services' %}" class="dropdown-item"> شروع طراحی</a>
-                        <a href="{% url 'projects' %}" class="dropdown-item">نمونه کارها</a>
+                        <a href="{% url 'services' %}" class="dropdown-item"> {% trans 'start design' %}</a>
+                        <a href="{% url 'projects' %}" class="dropdown-item">{% trans 'portfolio' %}</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'contactus' %}" class="nav-link">ارتباط با ما</a>
+                    <a href="{% url 'contactus' %}" class="nav-link">{% trans 'Contact Us' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'aboutus' %}" class="nav-link">درباره ما</a>
+                    <a href="{% url 'aboutus' %}" class="nav-link">{% trans 'About Us' %}</a>
                 </li>
                 <li class="nav-item">
                     {% if user.is_authenticated %}
@@ -42,30 +43,30 @@
                             {% csrf_token %}
                             <button type="submit" class="nav-link">
                                 <i class="bi bi-box-arrow-right"></i>
-                                خروج از حساب کاربری
+                                {% trans 'Logout' %}
                             </button>
                         </form>
                     {% else %}
                         <a href="{% url 'login' %}" class="nav-link ">
                             <i class="bi bi-box-arrow-in-right"></i>
-                            ورود به حساب کاربری
+                            {% trans 'Login' %}
                         </a>
                     {% endif %}
                 </li>
             </ul>
         </div>
-        <a class="navbar-brand" href="#">نام سایت</a>
+        <a class="navbar-brand" href="#">{% trans 'site name' %}</a>
     </nav>
     <div class="container main-project">
         <div class="row">
-            <div class="box" onclick="toggleImages('childRoomImages')">اتاق کودک</div>
-            <div class="box" onclick="toggleImages('livingRoomImages')">اتاق نشیمن</div>
-            <div class="box" onclick="toggleImages('kitchenImages')">آشپزخانه</div>
-            <div class="box" onclick="toggleImages('parentRoomImages')">اتاق والدین</div>
+            <div class="box" onclick="toggleImages('childRoomImages')">{% trans 'child Room' %}</div>
+            <div class="box" onclick="toggleImages('livingRoomImages')">{% trans 'living Room' %}</div>
+            <div class="box" onclick="toggleImages('kitchenImages')">{% trans 'kitchen' %}</div>
+            <div class="box" onclick="toggleImages('parentRoomImages')">{% trans 'parents Room' %}</div>
         </div>
 
         <div id="childRoomImages" class="image-row">
-            <div class="image-title">عکس‌های بارگذاری شده</div>
+            <div class="image-title">{% trans 'Uploaded photos' %}</div>
             <div class="uploaded-images">
                 <img src="{% static 'img/download (1).jpg' %}" alt="Child Room Image 1"
                      onclick="openLightbox(this.src)">
@@ -76,7 +77,7 @@
                 <img src="{% static 'img/download (4).jpg' %}" alt="Child Room Image 4"
                      onclick="openLightbox(this.src)">
             </div>
-            <div class="image-title">عکس‌های تولید شده</div>
+            <div class="image-title">{% trans 'Produced photos' %}</div>
             <div class="generated-images">
                 <img src="{% static 'img/download (5).jpg' %}" alt="Child Room Image 5"
                      onclick="openLightbox(this.src)">
@@ -89,14 +90,14 @@
         </div>
 
         <div id="livingRoomImages" class="image-row">
-            <div class="image-title">عکس‌های بارگذاری شده</div>
+            <div class="image-title">{% trans 'Uploaded photos' %}</div>
             <div class="uploaded-images">
                 <img src="living1.jpg" alt="Living Room Image 1">
                 <img src="living2.jpg" alt="Living Room Image 2">
                 <img src="living3.jpg" alt="Living Room Image 3">
                 <img src="living4.jpg" alt="Living Room Image 4">
             </div>
-            <div class="image-title">عکس‌های تولید شده</div>
+            <div class="image-title">{% trans 'Produced photos' %}</div>
             <div class="generated-images">
                 <img src="living5.jpg" alt="Living Room Image 5">
                 <img src="living6.jpg" alt="Living Room Image 6">
@@ -106,14 +107,14 @@
         </div>
 
         <div id="kitchenImages" class="image-row">
-            <div class="image-title">عکس‌های بارگذاری شده</div>
+            <div class="image-title">{% trans 'Uploaded photos' %}</div>
             <div class="uploaded-images">
                 <img src="kitchen1.jpg" alt="Kitchen Image 1">
                 <img src="kitchen2.jpg" alt="Kitchen Image 2">
                 <img src="kitchen3.jpg" alt="Kitchen Image 3">
                 <img src="kitchen4.jpg" alt="Kitchen Image 4">
             </div>
-            <div class="image-title">عکس‌های تولید شده</div>
+            <div class="image-title">{% trans 'Produced photos' %}</div>
             <div class="generated-images">
                 <img src="kitchen5.jpg" alt="Kitchen Image 5">
                 <img src="kitchen6.jpg" alt="Kitchen Image 6">
@@ -123,14 +124,14 @@
         </div>
 
         <div id="parentRoomImages" class="image-row">
-            <div class="image-title">عکس‌های بارگذاری شده</div>
+            <div class="image-title">{% trans 'Uploaded photos' %}</div>
             <div class="uploaded-images">
                 <img src="parent1.jpg" alt="Parent Room Image 1">
                 <img src="parent2.jpg" alt="Parent Room Image 2">
                 <img src="parent3.jpg" alt="Parent Room Image 3">
                 <img src="parent4.jpg" alt="Parent Room Image 4">
             </div>
-            <div class="image-title">عکس‌های تولید شده</div>
+            <div class="image-title">{% trans 'Produced photos' %}</div>
             <div class="generated-images">
                 <img src="parent5.jpg" alt="Parent Room Image 5">
                 <img src="parent6.jpg" alt="Parent Room Image 6">

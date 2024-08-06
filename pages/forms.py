@@ -1,6 +1,7 @@
 from django import forms
 from .models import ImageUpload
 from .models import ContactMessage
+from django.utils.translation import gettext as _
 
 
 # class ImageUploadForm(forms.ModelForm):
@@ -20,6 +21,7 @@ from .models import ContactMessage
 #             'image': forms.ClearableFileInput(attrs={'allow_multiple_selected': True})
 #
 #         }
+
 class MultipleFileInput(forms.ClearableFileInput):
     allow_multiple_selected = True
 
@@ -39,7 +41,7 @@ class MultipleFileField(forms.FileField):
 
 
 class ImageUploadForm(forms.ModelForm):
-    image = MultipleFileField(label='بارگذاری عکس', required=False)
+    image = MultipleFileField(label=_('upload image'), required=False)
 
     class Meta:
         model = ImageUpload
@@ -51,8 +53,8 @@ class ContactForm(forms.ModelForm):
         model = ContactMessage
         fields = ['first_name', 'last_name', 'email', 'message']
         widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'نام'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'نام خانوادگی'}),
-            'email': forms.EmailInput(attrs={'autofocus': False, 'class': 'form-control', 'placeholder': 'ایمیل'}),
-            'message': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'متن پیام'}),
+            'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('first name')}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': _('last name')}),
+            'email': forms.EmailInput(attrs={'autofocus': False, 'class': 'form-control', 'placeholder': _('email')}),
+            'message': forms.Textarea(attrs={'class': 'form-control', 'placeholder': _('text')}),
         }

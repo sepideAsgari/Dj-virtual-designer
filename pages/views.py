@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.utils.translation import gettext as _
 from .forms import ContactForm
 from django.views import View
 from PIL import Image
@@ -24,7 +25,7 @@ class ServicesPageView(View):
             images = request.FILES.getlist('image')
             if len(images) > 4:
                 return render(request, 'pages/services.html',
-                              {'form': form, 'error': 'شما نمی‌توانید بیشتر از 4 عکس بارگذاری کنید.'})
+                              {'form': form, 'error': _('You cannot upload more than 4 photos.')})
 
             uploaded_images = []
             for image in images:

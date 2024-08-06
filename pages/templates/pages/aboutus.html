@@ -28,14 +28,14 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="servicesDropdown">
                         <a href="{% url 'services' %}" class="dropdown-item"> {% trans 'start design' %}</a>
-                        <a href="{% url 'projects' %}" class="dropdown-item">نمونه کارها</a>
+                        <a href="{% url 'projects' %}" class="dropdown-item">{% trans 'portfolio' %}</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'contactus' %}" class="nav-link">ارتباط با ما</a>
+                    <a href="{% url 'contactus' %}" class="nav-link">{% trans 'Contact Us' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'aboutus' %}" class="nav-link">درباره ما</a>
+                    <a href="{% url 'aboutus' %}" class="nav-link">{% trans 'About Us' %}</a>
                 </li>
                 <li class="nav-item">
                     {% if user.is_authenticated %}
@@ -43,37 +43,32 @@
                             {% csrf_token %}
                             <button type="submit" class="nav-link">
                                 <i class="bi bi-box-arrow-right"></i>
-                                خروج از حساب کاربری
+                                {% trans 'Logout' %}
                             </button>
                         </form>
                     {% else %}
                         <a href="{% url 'login' %}" class="nav-link ">
                             <i class="bi bi-box-arrow-in-right"></i>
-                            ورود به حساب کاربری
+                            {% trans 'Login' %}
                         </a>
                     {% endif %}
                 </li>
             </ul>
         </div>
-        <a class="navbar-brand" href="#">نام سایت</a>
+        <a class="navbar-brand" href="#">{% trans 'site name' %}</a>
     </nav>
 
     <main class="container">
         <div class="about-title">
-            <h1>سوالات متداول</h1>
-            <p>Lorium ipsum dolor sit amet</p>
+            <h1>{% trans 'Frequently Asked Questions' %}</h1>
+            <p>{% trans 'Lorium ipsum dolor sit amet' %}</p>
         </div>
 
         <!-- Our Vision Section -->
         <div class="about-content row">
             <div class="col-md-6">
-                <h2>طراحی با هوش مصنوعی</h2>
-                <p>
-                    یک پلت فرم خلاقانه هوش مصنوعی برای صحنه سازی مجازی، بازسازی خانه، ویرایش چیدمان و
-                    طراحی داخلی است. این به افراد حرفه ای مانند مشاوران املاک، عکاسان، پیمانکاران و طراحان و همچنین
-                    صاحبان خانه پاسخ می دهد. این پلتفرم ابزارهای هوش مصنوعی پیشرفته ای را برای صحنه سازی مجازی بدون درز
-                    و تجسم بازسازی واضح ارائه می دهد. تغییرات سریع، بصری و قابل تنظیم را در اولویت قرار می
-                    دهد و منحنی یادگیری را برای یک تجربه طراحی سریع و واقعی از عکس حذف می کند.
+                <h2>{% trans 'Design with artificial intelligence' %}</h2>
+                <p>{% trans 'is a creative AI platform for virtual staging, home renovation, layout editing and interior design. It caters to professionals such as real estate agents, photographers, contractors and designers as well as homeowners. The platform offers advanced AI tools for seamless virtual staging and vivid reconstruction visualization. It prioritizes fast, intuitive, and customizable changes, removing the learning curve for a fast, photo-realistic design experience.' %}
                 </p>
 
             </div>
@@ -85,11 +80,9 @@
         <!-- Our Approach Section -->
         <div class="about-content row">
             <div class="col-md-6 order-md-2">
-                <h2>چگونه کار میکند؟</h2>
+                <h2>{% trans '?how it works' %}</h2>
                 <p>
-                    می توانید به سادگی عکس های خود را با فرمت JPG, JPEG, PNG و حداکثر اندازه 50 مگابایت آپلود کنید،
-                    تنظیمات برگزیده را انتخاب کنید و نتایج خود را در عرض
-                    چند ثانیه دریافت کنید.
+                    {% trans 'You can simply upload your photos in JPG, JPEG, PNG format with a maximum size of 50 MB, choose the preferred settings and get your results in seconds.' %}
                 </p>
 
             </div>
@@ -101,15 +94,15 @@
         <!-- Our Process Section -->
         <div class="about-content row">
             <div class="col-md-6">
-                <h2>چرا ما را انتخاب کنید؟</h2>
+                <h2>{% trans '?Why choose us' %}</h2>
                 <p>
-                    طراحی مجازی
+                    {% trans 'Virtual design' %}
                     <br>
-                    استفاده آسان
+                    {% trans 'Easy to use' %}
                     <br>
-                    سریع و قابل اعتماد
+                    {% trans 'Fast and reliable' %}
                     <br>
-                    مشاهده نتایج به صورت آنی
+                    {% trans 'View results instantly' %}
                 </p>
 
             </div>

@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load i18n %}
+
 {% block page_title %}
     Signup
 {% endblock %}
@@ -8,11 +10,11 @@
 <div class="container signup-container col-md-8">
     <form class="signup-form" method="post">
         {% csrf_token %}
-        <h2 class="fw-bold mt-3 mb-5">ثبت نام</h2>
+        <h2 class="fw-bold mt-3 mb-5">{% trans 'Sign up' %}</h2>
           <!-- Display form errors -->
         {% if form.errors %}
         <div class="alert alert-danger" role="alert">
-            <strong>خطا!</strong> لطفا اصلاحات لازم را انجام دهید:
+            <strong>{% trans 'error' %}</strong>{% trans 'Please make the necessary corrections:' %}
             <ul>
                 {% for field, errors in form.errors.items %}
                 {% for error in errors %}
@@ -49,7 +51,7 @@
                 {{ form.password2 }}
             </div>
         </div>
-        <button type="submit" class="col-md-8 btn signup-btn text-uppercase">ثبت نام</button>
+        <button type="submit" class="col-md-8 btn signup-btn text-uppercase">{% trans 'Sign up' %}</button>
     </form>
 </div>
 <!-- Footer-->

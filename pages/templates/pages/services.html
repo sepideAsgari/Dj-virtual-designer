@@ -1,6 +1,7 @@
-<!-- templates/pages/services.html -->
 {% extends '_base.html' %}
+
 {% load static %}
+{% load i18n %}
 
 {% block content %}
     <style>
@@ -163,56 +164,58 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">خانه</a>
+                    <a class="nav-link" href="{% url 'home' %}">{% translate 'Home' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'edit' %}" class="nav-link">حساب کاربری</a>
+                    <a href="{% url 'edit' %}" class="nav-link">{% trans 'Account' %}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        سرویس‌ها
+                        {% trans 'Services' %}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a href="{% url 'services' %}" class="dropdown-item"> شروع طراحی</a>
-                        <a href="{% url 'projects' %}" class="dropdown-item">نمونه کارها</a>
+                        <a href="{% url 'services' %}" class="dropdown-item"> {% trans 'start design' %}</a>
+                        <a href="{% url 'projects' %}" class="dropdown-item">{% trans 'portfolio' %}</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'contactus' %}" class="nav-link">ارتباط با ما</a>
+                    <a href="{% url 'contactus' %}" class="nav-link">{% trans 'Contact Us' %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'aboutus' %}" class="nav-link">درباره ما</a>
+                    <a href="{% url 'aboutus' %}" class="nav-link">{% trans 'About Us' %}</a>
                 </li>
                 <li class="nav-item">
-                    {% if user.is_authenticated %}
+                     {% if user.is_authenticated %}
                         <form action="{% url 'logout' %}" method="post">
                             {% csrf_token %}
                             <a href="{% url 'login' %}" class="nav-link ">
                                 <i class="bi bi-box-arrow-in-right"></i>
-                                خروج از حساب کاربری
+                                {% trans 'Logout' %}
                             </a>
                         </form>
                     {% else %}
                         <a href="{% url 'login' %}" class="nav-link ">
                             <i class="bi bi-box-arrow-in-right"></i>
-                            ورود به حساب کاربری
+                            {% trans 'Login' %}
                         </a>
                     {% endif %}
                 </li>
             </ul>
         </div>
-        <a class="navbar-brand" href="#">نام سایت</a>
+        <a class="navbar-brand" href="#">{% trans 'site name' %}</a>
     </nav>
     <div class="overlay"></div>
     <div class="upload-container ">
         <div class="row container ">
-            <p class="up-text">شروع طراحی</p>
+            <p class="up-text">{% trans 'Start Design' %}</p>
             <br>
             <p class="text-muted up-info">
                 <i class="bi bi-info-circle mb-4"></i>
-                فایلهای انتخابی باید فرمتJPG, JPEG, PNG داشته باشند
-                <br> و حداکثر 50 مگابایت باشند.
+                {% trans 'The selected files must be in JPG, JPEG, PNG format' %}
+                <br>
+                {% trans 'and be at most 50 MB.' %}
+
             </p>
             <form id="upload-form" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -223,13 +226,13 @@
                 <div id="preview-images-container" class="row mt-4">
                     <!-- Preview images will be shown here -->
                 </div>
-                <button type="submit">آپلود
+                <button type="submit">{% trans 'Upload' %}
                     <i class="bi bi-upload"></i>
                 </button>
 
 
                 {% if uploaded_success %}
-                    <div class="alert alert-success" id="success-message">تصاویر با موفقیت آپلود شدند!</div>
+                    <div class="alert alert-success" id="success-message">{% trans 'Images uploaded successfully!' %}</div>
                 {% endif %}
 
 
