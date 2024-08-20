@@ -19,3 +19,21 @@ Django Documentation
 Bootstrap
 Pillow Library
 JavaScript
+
+asgiref==3.8.1
+beautifulsoup4==4.12.3
+certifi==2024.7.4
+charset-normalizer==3.3.2
+crispy-bootstrap5==2024.2
+Django==4.2.14
+django-bootstrap-v5==1.0.11
+django-crispy-forms==2.2
+django-rosetta==0.10.0
+idna==3.7
+pillow==10.3.0
+polib==1.2.0
+requests==2.32.3
+soupsieve==2.5
+sqlparse==0.5.0
+tzdata==2024.1
+urllib3==2.2.2
