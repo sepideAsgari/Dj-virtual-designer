@@ -1,0 +1,49 @@
+{% extends '_base.html' %}
+
+{% load i18n %}
+
+{% block page_title %}
+    {% trans 'Login' %}
+{% endblock %}
+
+{% block content %}
+        <div class="container login-container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <form method="post" class="login-form">
+                    {% csrf_token %}
+                    <h2 class="fw-bold mb-4">{% trans 'Login to account' %}</h2>
+                    <div class="mb-4 form-group">
+                        <input type="text" name="username" class="form-control" id="username" placeholder={% trans 'Email' %} required>
+                    </div>
+                    <div class="mb-2 form-group">
+                        <input type="password" name="password" class="form-control" id="password" placeholder={% trans 'Password' %} required>
+                    </div>
+                    <div class="row justify-content-center align-items-center mb-4">
+                        <div class="form-group col-md-6">
+                            <label for="form-check-inp text-white-50">{% trans 'Remember me' %}</label>
+                            <input type="checkbox" class="form-check-inp" name="remember_me">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <a class="fg-pass text-muted" href="{% url 'password_reset' %}">{% trans 'Forget password?' %}</a>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn login-btn align-items-center justify-content-center">{% trans 'Log in' %}</button>
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                        <p class="txt-form text-muted mb-0">{% trans 'Dont have an account?' %}</p>
+                        <a href="{% url 'signup' %}" class="signup-lable">{% trans 'Signup' %}</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer mt-5 py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-white-50">Copyright &copy;</div>
+        </div>
+    </footer>
+{% endblock %}
+

@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-06 22:35+0330\n"
+"PO-Revision-Date: 2024-08-06 22:36+0330\n"
+"Last-Translator: fatemeh valipourrrr <valipourf52@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\registration\edit_profile.html:5
+msgid "Edit Profile"
+msgstr "ویرایش حساب کاربری"
+
+#: .\registration\edit_profile.html:17
+msgid "Home"
+msgstr "خانه"
+
+#: .\registration\edit_profile.html:20
+msgid "Account"
+msgstr "حساب کاربری"
+
+#: .\registration\edit_profile.html:25
+msgid "Services"
+msgstr "سرویس ها"
+
+#: .\registration\edit_profile.html:28
+msgid "start design"
+msgstr "شروع طراحی"
+
+#: .\registration\edit_profile.html:29
+msgid "portfolio"
+msgstr "نمونه کارها"
+
+#: .\registration\edit_profile.html:33
+msgid "Contact Us"
+msgstr "ارتباط با ما"
+
+#: .\registration\edit_profile.html:36
+msgid "About Us"
+msgstr "درباره ما"
+
+#: .\registration\edit_profile.html:44
+msgid "Logout"
+msgstr "خروج"
+
+#: .\registration\edit_profile.html:50 .\registration\login.html:6
+msgid "Login"
+msgstr "ورود"
+
+#: .\registration\edit_profile.html:56
+msgid "site name"
+msgstr "نام سایت"
+
+#: .\registration\edit_profile.html:62
+msgid "User information"
+msgstr "اطلاعات کاربری"
+
+#: .\registration\edit_profile.html:77
+msgid "Save changes"
+msgstr "ذخیره تغییرات"
+
+#: .\registration\edit_profile.html:83 .\registration\login.html:20
+msgid "Password"
+msgstr "رمز عبور"
+
+#: .\registration\edit_profile.html:99
+msgid "Change Password"
+msgstr "تغییر رمز عبور"
+
+#: .\registration\login.html:15
+msgid "Login to account"
+msgstr "ورود به حساب کاربری"
+
+#: .\registration\login.html:17
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\registration\login.html:24
+msgid "Remember me"
+msgstr "مرا به خاطر بسپار"
+
+#: .\registration\login.html:28
+msgid "Forget password?"
+msgstr "فراموشی رمز عبور؟"
+
+#: .\registration\login.html:31
+msgid "Log in"
+msgstr "ورود"
+
+#: .\registration\login.html:33
+msgid "Dont have an account?"
+msgstr "عضو نیستید؟"
+
+#: .\registration\login.html:34
+msgid "Signup"
+msgstr "ثبت نام"
+
+#: .\registration\password_reset_confirm.html:6
+#: .\registration\password_reset_form.html:8
+#| msgid "Password"
+msgid "Password Reset"
+msgstr "بازیابی رمز عبور"
+
+#: .\registration\password_reset_email.html:3
+msgid "Hi"
+msgstr "سلام"
+
+#: .\registration\password_reset_email.html:5
+msgid ""
+"There was a request to change your password! If you did not make this "
+"request then please ignore this email. Otherwise, please click this link to "
+"change your password:"
+msgstr ""
+"درخواستی برای تغییر رمز عبور شما وجود داشت!\n"
+"\n"
+"اگر این درخواست را انجام نداده اید، لطفاً این ایمیل را نادیده بگیرید.\n"
+"\n"
+"در غیر این صورت، لطفا روی این لینک کلیک کنید تا رمز عبور خود را تغییر دهید:"
+
+#: .\registration\password_reset_form.html:17
+msgid "Password recovery"
+msgstr "بازیابی رمز عبور"
+
+#: .\registration\password_reset_form.html:27
+msgid "Submit"
+msgstr "ارسال"
+
+#: .\registration\password_reset_form.html:42
+msgid "A recovery email has been sent to you."
+msgstr "ایمیل بازیابی برای شما ارسال شد."
+
+#: .\registration\signup.html:6
+#| msgid "Sign up"
+msgid "Sign Up"
+msgstr "ثبت نام"
+
+#: .\registration\signup.html:13 .\registration\signup.html:54
+msgid "Sign up"
+msgstr "ثبت نام"
+
+#: .\registration\signup.html:17
+msgid "error"
+msgstr "خطا!"
+
+#: .\registration\signup.html:17
+msgid "Please make the necessary corrections:"
+msgstr " لطفا اصلاحات لازم را انجام دهید:"

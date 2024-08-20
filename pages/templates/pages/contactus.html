@@ -1,0 +1,100 @@
+{% extends '_base.html' %}
+
+{% load i18n %}
+
+{% block page_title %}
+    {% trans 'Contact Us' %}
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تغییر ناوبری">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">{% translate 'Home' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'edit' %}" class="nav-link">{% trans 'Account' %}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% trans 'Services' %}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a href="{% url 'services' %}" class="dropdown-item"> {% trans 'start design' %}</a>
+                        <a href="{% url 'projects' %}" class="dropdown-item">{% trans 'portfolio' %}</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contactus' %}" class="nav-link">{% trans 'Contact Us' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'aboutus' %}" class="nav-link">{% trans 'About Us' %}</a>
+                </li>
+                <li class="nav-item">
+                    {% if user.is_authenticated %}
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link">
+                                <i class="bi bi-box-arrow-right"></i>
+                                {% trans 'Logout' %}
+                            </button>
+                        </form>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="nav-link ">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            {% trans 'Login' %}
+                        </a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="#">{% trans 'site name' %}</a>
+    </nav>
+    <div class="contact-head container">
+        <div class="head-content">
+            <P>
+                {% trans 'Thank you for your message!' %}
+                <br>
+                {% trans 'Our experts will contact you as soon as possible.' %}
+            </P>
+        </div>
+    </div>
+    <section class="row">
+        <div class="container contact-container col-md-10">
+            <form method="post" class="contact-form">
+                {% csrf_token %}
+                <div class="row justify-content-center align-items-center mt-4">
+                    <div class="col-md-6 mb-4 form-group">
+                        {{ form.first_name }}
+                    </div>
+                    <div class="col-md-6 mb-4 form-group">
+                        {{ form.last_name }}
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4 form-group">
+                    {{ form.email }}
+                </div>
+                <div class="col-md-8 mb-4 form-group">
+                    {{ form.message }}
+                </div>
+                <button type="submit" class="col-md-8 btn contact-btn" onclick="subBtn()">{% trans 'Submit' %}</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer mt-5 py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-white-50">Copyright &copy;</div>
+        </div>
+    </footer>
+    <script>
+        function subBtn() {
+            alert({% trans 'Your message has been successfully sent.' %});
+        }
+    </script>
+{% endblock %}

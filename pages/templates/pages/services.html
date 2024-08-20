@@ -1,0 +1,250 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block page_title %}
+    {% trans 'Services' %}
+{% endblock %}
+
+{% block content %}
+    <style>
+        /* nav */
+
+        .navbar {
+            background-color: #93956b !important;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 12px 5%;
+        }
+
+        .navbar-nav .nav-item {
+            float: right;
+            margin-left: 15px;
+
+        }
+
+        .navbar-nav .nav-link {
+            text-decoration: none;
+            color: #ffff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #282828 !important;
+        }
+
+        .navbar-nav .nav-item:hover {
+            background-color: #93956b !important;
+            transition: 0.4s;
+        }
+
+        .navbar-nav .dropdown-menu {
+            text-align: right;
+            right: 0;
+            left: auto;
+        }
+
+        .navbar-toggler {
+            float: left;
+        }
+
+        .upload-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('/static/img/bg-masthead.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(227, 229, 221, 0.601);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #93956b;
+            box-shadow: 0 0 20px #93956b;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            max-height: 500px;
+            padding: 30px;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .up-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+            color: #e3e5dd;
+            margin-bottom: 50px;
+        }
+
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label[for="id_image"] {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #93956b;
+            background-color: #e3e5dd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        label[for="id_image"]:hover {
+            background-color: #eeefe8;
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
+
+        button[type="submit"] {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #93956b;
+            background-color: #e3e5dd;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #eeefe8;
+            transition: 0.3s;
+            transform: scale(1.05);
+        }
+
+        #image-preview img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        #success-message {
+            display: none;
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تغییر ناوبری">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">{% translate 'Home' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'edit' %}" class="nav-link">{% trans 'Account' %}</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% trans 'Services' %}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a href="{% url 'services' %}" class="dropdown-item"> {% trans 'start design' %}</a>
+                        <a href="{% url 'projects' %}" class="dropdown-item">{% trans 'portfolio' %}</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contactus' %}" class="nav-link">{% trans 'Contact Us' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'aboutus' %}" class="nav-link">{% trans 'About Us' %}</a>
+                </li>
+                <li class="nav-item">
+                     {% if user.is_authenticated %}
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <a href="{% url 'login' %}" class="nav-link ">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                {% trans 'Logout' %}
+                            </a>
+                        </form>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="nav-link ">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            {% trans 'Login' %}
+                        </a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="#">{% trans 'site name' %}</a>
+    </nav>
+    <div class="overlay"></div>
+    <div class="upload-container ">
+        <div class="row container ">
+            <p class="up-text">{% trans 'Start Design' %}</p>
+            <br>
+            <p class="text-muted up-info">
+                <i class="bi bi-info-circle mb-4"></i>
+                {% trans 'The selected files must be in JPG, JPEG, PNG format' %}
+                <br>
+                {% trans 'and be at most 50 MB.' %}
+
+            </p>
+            <form id="upload-form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                {#            <label for="id_image">#}
+                {#                <i class="bi bi-upload"></i></label>#}
+
+                <div id="preview-images-container" class="row mt-4">
+                    <!-- Preview images will be shown here -->
+                </div>
+                <button type="submit">{% trans 'Upload' %}
+                    <i class="bi bi-upload"></i>
+                </button>
+
+
+                {% if uploaded_success %}
+                    <div class="alert alert-success" id="success-message">{% trans 'Images uploaded successfully!' %}</div>
+                {% endif %}
+
+
+                {% if error %}
+                    <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'js/upload.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block page_title %}
+    {% trans 'Home' %}
+{% endblock %}
+
+{% block content %}
+    <nav class="vertical-nav fixed" id="sidebar">
+        <div class="py-4 px-3 mb-4 nav-top">
+            <div class="media d-flex align-items-center">
+                <img src="#" alt="logo" width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+            </div>
+        </div>
+        <hr class="hr"/>
+        <ul class="nav flex-column nav-row">
+            <li class="nav-item">
+                <a href="{% url 'edit' %}" class="nav-link">
+                    <i class="bi bi-person"></i>
+                    {% trans 'Account' %}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#services-dropdown" class="nav-link dropdown-toggle" data-toggle="collapse"
+                   aria-expanded="false">
+                    <i class="bi bi-house-gear"></i>
+                    {% trans 'Services' %}
+                </a>
+                <ul class="collapse list-unstyled drop-nav" id="services-dropdown">
+                    <li class="nav-item">
+                        <a href="{% url 'services' %}" class="nav-link">
+                            <i class="bi bi-house-heart"></i>
+                            {% trans 'start design' %}
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'projects' %}" class="nav-link">
+                            <i class="bi bi-images"></i>
+                            {% trans 'portfolio' %}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'contactus' %}" class="nav-link">
+                    <i class="bi bi-chat"></i>
+                    {% trans 'Contact Us' %}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'aboutus' %}" class="nav-link">
+                    <i class="bi bi-info-circle"></i>
+                    {% trans 'About Us' %}
+                </a>
+            </li>
+            <li class="nav-item">
+                {% if user.is_authenticated %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <a href="{% url 'login' %}" class="nav-link ">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            {% trans 'Logout' %}
+                        </a>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}" class="nav-link ">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        {% trans 'Login' %}
+                    </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+
+    <div class="row align-items-center justify-content-center d-flex">
+        <div class="row header-sec">
+            <img src="{% static 'img/bg-masthead.jpg' %}" class="head-img" alt="">
+        </div>
+    </div>
+    <!-- gallery section -->
+    <div class="row gallery-section align-items-center justify-content-center d-flex py-5">
+        <div class="row gallery-text fw-bold">
+            <a href="{% url 'projects' %}" class="topic-link">{% trans 'The latest portfolio' %}</a>
+            <hr class="topic-divider">
+        </div>
+        <div class="row col-md-10">
+            <div class="col-lg-3 col-md-4 col-xs-6 ">
+                <a href="{% static 'img/download (1).jpg' %}" class="ligthbox" rel="ligthbox">
+                    <img src="{% static 'img/download (1).jpg' %}" class="img-fluid sample-img " alt="">
+
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 ">
+                <a href="{% static 'img/download (2)' %}" class="ligthbox">
+                    <img src="{% static 'img/download (2).jpg' %}" class="img-fluid sample-img" alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a href="{% static 'img/download (3)' %}" class="ligthbox">
+                    <img src="{% static 'img/download (3).jpg' %}" class="img-fluid sample-img " alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a href="{% static 'img/download (3).jpg' %}" class="ligthbox">
+                    <img src="{% static 'img/download (3).jpg' %}" class="img-fluid sample-img " alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a href="{% static 'img/download (4).jpg' %}" class="ligthbox">
+                    <img src="{% static 'img/download (4).jpg' %}" class="img-fluid sample-img " alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a href="{% static 'img/download (5).jpg' %}" class="ligthbox">
+                    <img src="{% static 'img/download (5).jpg' %}" class="img-fluid sample-img " alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a href="{% static 'img/download (6).jpg' %}" class="ligthbox">
+                    <img src="{% static 'img/download (6).jpg' %}" class="img-fluid sample-img " alt="">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a href="{% static 'img/download (7).jpg' %}" class="ligthbox">
+                    <img src="{% static 'img/download (7).jpg' %}" class="img-fluid sample-img" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end gallery section -->
+
+    <div class="row work-stage align-items-center justify-content-center d-flex py-5">
+
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer mt-5 py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-white-50">Copyright &copy;</div>
+        </div>
+    </footer>
+
+
+{% endblock %}

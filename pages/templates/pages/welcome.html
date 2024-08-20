@@ -1,0 +1,31 @@
+{% extends '_base.html' %}
+
+{% load i18n %}
+
+{% block page_title %}
+    {% trans 'Welcome' %}
+{% endblock %}
+
+{% block content %}
+    <div class="welcome">
+        <div class="overlay">
+            <div class="content">
+                <div class="container px-4 px-lg-5 h-100">
+                    <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                        <div class="col-lg-8 align-self-end">
+                            <h1 class="text-white font-weight-bold">{% trans 'Choose Virtual Design' %}</h1>
+                            <hr class="divider"/>
+                        </div>
+                        <div class="col-lg-8 align-self-baseline">
+                            {% if user.is_authenticated %}
+                                <a class="btn btn-xl welcome-btn" href="{% url 'home' %}">{% trans 'Welcome' %}</a>
+                            {% else %}
+                                <a class="btn btn-xl welcome-btn" href="{% url 'login' %}">{% trans 'Welcome' %}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

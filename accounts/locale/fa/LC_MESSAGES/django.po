@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-30 22:45+0330\n"
+"PO-Revision-Date: 2024-07-30 22:46+0330\n"
+"Last-Translator: fatemeh valipourrrr <valipourf52@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\forms.py:19
+msgid "First name"
+msgstr "نام"
+
+#: .\forms.py:21
+msgid "Last name"
+msgstr "نام خانوادگی"
+
+#: .\forms.py:22
+msgid "email"
+msgstr "ایمیل"
+
+#: .\forms.py:23
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\forms.py:25
+msgid "Password"
+msgstr "رمز عبور"
+
+#: .\forms.py:27
+msgid "Repeat the password"
+msgstr "تکرار رمز عبور"
+
+#: .\forms.py:39
+msgid "The password and its repetition must be the same"
+msgstr "رمز عبور و تکرار آن باید یکسان باشند"
+
+#: .\forms.py:71
+msgid "Current password"
+msgstr "رمز عبور فعلی"
+
+#: .\forms.py:72
+msgid "New password"
+msgstr "رمز عبور جدید"
+
+#: .\forms.py:73
+msgid "Repeat the new password"
+msgstr "تکرار رمز عبور جدید"
+
+#: .\forms.py:81
+msgid "The new passwords do not match."
+msgstr "رمزهای عبور جدید با هم مطابقت ندارند."
+
+#: .\urls.py:9
+msgid "login/"
+msgstr "ورود/"
+
+#: .\urls.py:11
+msgid "signup/"
+msgstr "ثبت-نام/"
+
+#: .\urls.py:12
+msgid "edit-profile/"
+msgstr "ویرایش-حساب-کاربری"

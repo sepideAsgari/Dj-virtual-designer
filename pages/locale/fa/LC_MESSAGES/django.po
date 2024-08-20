@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-06 22:29+0330\n"
+"PO-Revision-Date: 2024-08-06 22:32+0330\n"
+"Last-Translator: fatemeh valipourrrr <valipourf52@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\forms.py:44
+msgid "upload image"
+msgstr "بارگذاری عکس"
+
+#: .\forms.py:56
+msgid "first name"
+msgstr "نام"
+
+#: .\forms.py:57
+msgid "last name"
+msgstr "نام خانواذگی"
+
+#: .\forms.py:58
+msgid "email"
+msgstr "ایمیل"
+
+#: .\forms.py:59
+msgid "text"
+msgstr "متن پیام"
+
+#: .\templates\pages\aboutus.html:7 .\templates\pages\aboutus.html:38
+#: .\templates\pages\contactus.html:37 .\templates\pages\home.html:55
+#: .\templates\pages\projects.html:38 .\templates\pages\services.html:190
+msgid "About Us"
+msgstr "درباره ما"
+
+#: .\templates\pages\aboutus.html:19 .\templates\pages\contactus.html:18
+#: .\templates\pages\home.html:7 .\templates\pages\projects.html:19
+#: .\templates\pages\services.html:171
+msgid "Home"
+msgstr "خانه"
+
+#: .\templates\pages\aboutus.html:22 .\templates\pages\contactus.html:21
+#: .\templates\pages\home.html:22 .\templates\pages\projects.html:22
+#: .\templates\pages\services.html:174
+msgid "Account"
+msgstr "حساب کاربری"
+
+#: .\templates\pages\aboutus.html:27 .\templates\pages\contactus.html:26
+#: .\templates\pages\home.html:29 .\templates\pages\projects.html:27
+#: .\templates\pages\services.html:7 .\templates\pages\services.html:179
+msgid "Services"
+msgstr "سرویس ها"
+
+#: .\templates\pages\aboutus.html:30 .\templates\pages\contactus.html:29
+#: .\templates\pages\home.html:35 .\templates\pages\projects.html:30
+#: .\templates\pages\services.html:182
+msgid "start design"
+msgstr "شروع طراحی"
+
+#: .\templates\pages\aboutus.html:31 .\templates\pages\contactus.html:30
+#: .\templates\pages\home.html:41 .\templates\pages\projects.html:31
+#: .\templates\pages\services.html:183
+msgid "portfolio"
+msgstr "نمونه کارها"
+
+#: .\templates\pages\aboutus.html:35 .\templates\pages\contactus.html:6
+#: .\templates\pages\contactus.html:34 .\templates\pages\home.html:49
+#: .\templates\pages\projects.html:35 .\templates\pages\services.html:187
+msgid "Contact Us"
+msgstr "ارتباط با ما"
+
+#: .\templates\pages\aboutus.html:46 .\templates\pages\contactus.html:45
+#: .\templates\pages\home.html:64 .\templates\pages\projects.html:46
+#: .\templates\pages\services.html:198
+msgid "Logout"
+msgstr "خروج"
+
+#: .\templates\pages\aboutus.html:52 .\templates\pages\contactus.html:51
+#: .\templates\pages\home.html:70 .\templates\pages\projects.html:52
+#: .\templates\pages\services.html:204
+msgid "Login"
+msgstr "ورود"
+
+#: .\templates\pages\aboutus.html:58 .\templates\pages\contactus.html:57
+#: .\templates\pages\projects.html:58 .\templates\pages\services.html:210
+msgid "site name"
+msgstr "نام سایت"
+
+#: .\templates\pages\aboutus.html:63
+msgid "Frequently Asked Questions"
+msgstr "سوالات متداول"
+
+#: .\templates\pages\aboutus.html:64
+msgid "Lorium ipsum dolor sit amet"
+msgstr "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+
+#: .\templates\pages\aboutus.html:70
+msgid "Design with artificial intelligence"
+msgstr "طراحی با هوش مصنوعی"
+
+#: .\templates\pages\aboutus.html:71
+msgid ""
+"is a creative AI platform for virtual staging, home renovation, layout "
+"editing and interior design. It caters to professionals such as real estate "
+"agents, photographers, contractors and designers as well as homeowners. The "
+"platform offers advanced AI tools for seamless virtual staging and vivid "
+"reconstruction visualization. It prioritizes fast, intuitive, and "
+"customizable changes, removing the learning curve for a fast, photo-"
+"realistic design experience."
+msgstr ""
+"یک پلت فرم خلاقانه هوش مصنوعی برای صحنه سازی مجازی، بازسازی خانه، ویرایش چیدمان و\n"
+"                    طراحی داخلی است. این به افراد حرفه ای مانند مشاوران املاک، عکاسان، پیمانکاران و طراحان و همچنین\n"
+"                    صاحبان خانه پاسخ می دهد. این پلتفرم ابزارهای هوش مصنوعی پیشرفته ای را برای صحنه سازی مجازی بدون درز\n"
+"                    و تجسم بازسازی واضح ارائه می دهد. تغییرات سریع، بصری و قابل تنظیم را در اولویت قرار می\n"
+"                    دهد و منحنی یادگیری را برای یک تجربه طراحی سریع و واقعی از عکس حذف می کند."
+
+#: .\templates\pages\aboutus.html:83
+msgid "?how it works"
+msgstr "چگونه کار میکند؟"
+
+#: .\templates\pages\aboutus.html:85
+msgid ""
+"You can simply upload your photos in JPG, JPEG, PNG format with a maximum "
+"size of 50 MB, choose the preferred settings and get your results in "
+"seconds."
+msgstr ""
+"می توانید به سادگی عکس های خود را با فرمت JPG, JPEG, PNG و حداکثر اندازه 50 مگابایت آپلود کنید،\n"
+"                    تنظیمات برگزیده را انتخاب کنید و نتایج خود را در عرض\n"
+"                    چند ثانیه دریافت کنید."
+
+#: .\templates\pages\aboutus.html:97
+msgid "?Why choose us"
+msgstr "چرا ما را انتخاب کنید؟"
+
+#: .\templates\pages\aboutus.html:99
+msgid "Virtual design"
+msgstr "طراحی مجازی"
+
+#: .\templates\pages\aboutus.html:101
+msgid "Easy to use"
+msgstr "استفاده آسان"
+
+#: .\templates\pages\aboutus.html:103
+msgid "Fast and reliable"
+msgstr "سریع و قابل اعتماد"
+
+#: .\templates\pages\aboutus.html:105
+msgid "View results instantly"
+msgstr "مشاهده نتایج به صورت آنی"
+
+#: .\templates\pages\contactus.html:62
+msgid "Thank you for your message!"
+msgstr "ممنون از پیام شما!"
+
+#: .\templates\pages\contactus.html:64
+msgid "Our experts will contact you as soon as possible."
+msgstr "کارشناسان ما در اسرع وقت با شما تماس میگیرند."
+
+#: .\templates\pages\contactus.html:86
+msgid "Submit"
+msgstr "ارسال"
+
+#: .\templates\pages\contactus.html:97
+msgid "Your message has been successfully sent."
+msgstr "پیام شما با موفقیت ارسال شد."
+
+#: .\templates\pages\home.html:85
+msgid "The latest portfolio"
+msgstr "آخرین نمونه کارها"
+
+#: .\templates\pages\projects.html:7
+#| msgid "projects/"
+msgid "Projects"
+msgstr "نمونه-کار-ها"
+
+#: .\templates\pages\projects.html:62
+msgid "child Room"
+msgstr "اتاق کودک"
+
+#: .\templates\pages\projects.html:63
+msgid "living Room"
+msgstr "اتاق نشیمن"
+
+#: .\templates\pages\projects.html:64
+msgid "kitchen"
+msgstr "اتاق والدین"
+
+#: .\templates\pages\projects.html:65
+msgid "parents Room"
+msgstr "آشپزخانه"
+
+#: .\templates\pages\projects.html:69 .\templates\pages\projects.html:93
+#: .\templates\pages\projects.html:110 .\templates\pages\projects.html:127
+msgid "Uploaded photos"
+msgstr "عکس‌های بارگذاری شده"
+
+#: .\templates\pages\projects.html:80 .\templates\pages\projects.html:100
+#: .\templates\pages\projects.html:117 .\templates\pages\projects.html:134
+msgid "Produced photos"
+msgstr "عکس‌های تولید شده"
+
+#: .\templates\pages\services.html:215
+msgid "Start Design"
+msgstr "شروع طراحی"
+
+#: .\templates\pages\services.html:219
+msgid "The selected files must be in JPG, JPEG, PNG format"
+msgstr "فایلهای انتخابی باید فرمتJPG, JPEG, PNG داشته باشند"
+
+#: .\templates\pages\services.html:221
+msgid "and be at most 50 MB."
+msgstr "و حداکثر 50 مگابایت باشند."
+
+#: .\templates\pages\services.html:233
+msgid "Upload"
+msgstr "آپلود"
+
+#: .\templates\pages\services.html:239
+msgid "Images uploaded successfully!"
+msgstr "تصاویر با موفقیت آپلود شدند!"
+
+#: .\templates\pages\welcome.html:6 .\templates\pages\welcome.html:21
+#: .\templates\pages\welcome.html:23
+msgid "Welcome"
+msgstr "بفرمایید"
+
+#: .\templates\pages\welcome.html:16
+msgid "Choose Virtual Design"
+msgstr "طراحی مجازی را انتخاب کنید"
+
+#: .\urls.py:8
+msgid "home/"
+msgstr "خانه/"
+
+#: .\urls.py:9
+msgid "aboutus/"
+msgstr "درباره-ما/"
+
+#: .\urls.py:10
+msgid "contactus/"
+msgstr "ارتباط-با-ما/"
+
+#: .\urls.py:11
+msgid "services/"
+msgstr "شروع-طراحی/"
+
+#: .\urls.py:12
+msgid "projects/"
+msgstr "نمونه-کار-ها/"
+
+#: .\views.py:28
+msgid "You cannot upload more than 4 photos."
+msgstr "شما نمی‌توانید بیشتر از 4 عکس بارگذاری کنید"
+
+#~ msgid "name"
+#~ msgstr "نام "
