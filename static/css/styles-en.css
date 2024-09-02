@@ -381,8 +381,7 @@ body {
 .nav-item:hover {
   background-color: #e2d8a5;
   transition: 0.4s;
-  overflow: hidden;
-  width: 15rem;
+
 }
 
 .nav-row {
