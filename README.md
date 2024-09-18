@@ -37,3 +37,6 @@ soupsieve==2.5
 sqlparse==0.5.0
 tzdata==2024.1
 urllib3==2.2.2
+
+
+http://aishid.ir
