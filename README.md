@@ -39,4 +39,4 @@ tzdata==2024.1
 urllib3==2.2.2
 
 
-http://aishid.ir
+https://aishid.ir
